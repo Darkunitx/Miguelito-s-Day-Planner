@@ -5,8 +5,7 @@ var timeDisplay = document.querySelector("#currentDay");
 
 function displayTime(today) {
     var today = dayjs();
-    console.log(today.format("dddd MMMM D"));
-    $('currentDay').text(today.format('dddd MMMM D'));
+    $('#currentDay').text(today.format('dddd MMMM D'));
 
 }
 
