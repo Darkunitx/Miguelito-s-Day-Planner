@@ -1,10 +1,11 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+$( document ).ready(function() {
+
+
 var timeDisplay = document.querySelector("#currentDay");
 
 function displayTime(today) {
     var today = dayjs();
+    console.log(today.format("dddd MMMM D"));
     $('#currentDay').text(today.format('dddd MMMM D'));
 
 }
@@ -12,7 +13,8 @@ function displayTime(today) {
 displayTime();
 
 
-$(function plannerFunction() {
+function plannerFunction() {
+    console.log($(this).parent().attr('id'));
 
     
     // TODO: Add a listener for click events on the save button. This code should
@@ -33,4 +35,7 @@ $(function plannerFunction() {
     // attribute of each time-block be used to do this?
     //
     // TODO: Add code to display the current date in the header of the page.
-  });
+  };
+
+  $(".saveBtn").on("click", plannerFunction)
+});  
