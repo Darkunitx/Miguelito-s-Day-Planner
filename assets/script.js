@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+  
 
  
 var timeDisplay = document.querySelector("#currentDay");
@@ -20,16 +21,6 @@ function backgroundColorSetter () {
 
   function colorRetrieve () {
 
-    // var nine = $('#9');
-    // var ten = $('#10');
-    // var eleven = $('#11');
-    // var twelve = $('#12');
-    // var thirteen = $('#13');
-    // var fourteen = $('#14');
-    // var fifteen = $('#15');
-    // var sixteen = $('#16');
-    // var seventeen = $('#17');  
-
     $('.row').each(function () {
       var rowTime = parseInt($(this).attr('id'));
     
@@ -50,6 +41,16 @@ function backgroundColorSetter () {
   colorRetrieve();
 
   function plannerFunction () {
+
+    var nine = $('#9');
+    var ten = $('#10');
+    var eleven = $('#11');
+    var twelve = $('#12');
+    var thirteen = $('#13');
+    var fourteen = $('#14');
+    var fifteen = $('#15');
+    var sixteen = $('#16');
+    var seventeen = $('#17');  
 
   }
 
