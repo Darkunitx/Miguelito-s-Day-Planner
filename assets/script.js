@@ -1,8 +1,17 @@
-$( document ).ready(function() {
+$(document).ready(function() {
+
+  $(".saveBtn").on('click', function () {
+
+    console.log(localStorage);
+    // NEED TO SET FROM LOCAL STORAGE AND GET FROM LOCAL SOTRAGE ASWELL.
+    
+
+
+  });
   
 
- 
-var timeDisplay = document.querySelector("#currentDay");
+
+  
 
 function displayTime(today) {
     var today = dayjs();
@@ -14,24 +23,21 @@ function displayTime(today) {
 displayTime();
 
 function backgroundColorSetter () {
-
   var currentHour = dayjs();
-  var newHour = (parseInt(currentHour.format("H")));
-
+  var updatedHour = (parseInt(currentHour.format("H")));
 
   function colorRetrieve () {
 
     $('.row').each(function () {
-      var rowTime = parseInt($(this).attr('id'));
+      var rowTime = parseInt($(this).attr("id").split("hour")[1]);
     
+      console.log(updatedHour, rowTime);
 
-      console.log(newHour, rowTime);
-
-      if(rowTime === newHour) {
+      if(rowTime === updatedHour) {
         $(this).removeClass('past future');
-      }  else if (rowTime > newHour) {
+      }  else if (rowTime > updatedHour) {
         $(this).removeClass('past present');
-      }  else if (rowTime < newHour) {
+      }  else if (rowTime < updatedHour) {
         $(this).removeClass('present future');
       }
 
@@ -40,23 +46,9 @@ function backgroundColorSetter () {
 
   colorRetrieve();
 
-  function plannerFunction () {
-
-    var nine = $('#9');
-    var ten = $('#10');
-    var eleven = $('#11');
-    var twelve = $('#12');
-    var thirteen = $('#13');
-    var fourteen = $('#14');
-    var fifteen = $('#15');
-    var sixteen = $('#16');
-    var seventeen = $('#17');  
-
-  }
-
-  $(".saveBtn").on("click", plannerFunction);
 }
 
 backgroundColorSetter();
+
 
 });  
