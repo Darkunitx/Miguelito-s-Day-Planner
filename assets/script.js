@@ -1,27 +1,17 @@
 $(document).ready(function() {
 
-  var storedData = JSON.parse(localStorage.getItem('noteData'));
-  console.log(storedData);
-  // display notedata
 
-  $(".saveBtn").on('click', function (event) {
+  $(".saveBtn").on('click', function () {
     
-    var event = $(event.target);
-    var note = event.prev().val();
-    console.log(note);
-
+    var keyName = $(this).siblings(".text-center").text().trim();
+    var keyValue = $(this).siblings(".description").val().trim();
+    console.log(keyName);
+    console.log(keyValue);
     console.log(localStorage);
-    var data = {"hour": 9, "noteText": "hello note here"}
-    localStorage.setItem('noteData',JSON.stringify(data)
-    )
-    // stringify the line above
 
-    // CAPTURE DATA
-    // ASSIGN DATA TO VARIABLE
-    //  NEED TO SET FROM LOCAL STORAGE AND GET FROM LOCAL SOTRAGE ASWELL.
-    
-    
-
+    localStorage.setItem(keyName, keyValue);
+    console.log(localStorage);
+  
 
   });
   

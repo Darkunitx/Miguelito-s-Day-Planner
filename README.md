@@ -1,7 +1,7 @@
 # My Workday Planner
 
 ## Description 
-- 
+- Website created to help users plan their workday and save their information. 
 
 ## Table of contents
 - [Description](#description)
