@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  // the following 31 lines allow the user to getitem from localStorage.
   nineAmEl = $("#9MORNING");
   tenAmEl = $("#10MORNING");
   elevenAmEl = $("#11MORNING");
@@ -33,6 +33,7 @@ $(document).ready(function() {
 
 
   $(".saveBtn").on('click', function () {
+    // function that saves info when you save button
     
     var keyName = $(this).siblings(".text-center").text().trim();
     var keyValue = $(this).siblings(".description").val().trim();
@@ -43,6 +44,7 @@ $(document).ready(function() {
   
 
 function displayTime(today) {
+  // displays time
     var today = dayjs();
     console.log(today.format("dddd MMMM D"));
     $('#currentDay').text(today.format('dddd MMMM D'));
@@ -52,6 +54,7 @@ function displayTime(today) {
 displayTime();
 
 function backgroundColorSetter () {
+  //changes the background color by removing classes when an if statement is true/false
   var currentHour = dayjs();
   var updatedHour = (parseInt(currentHour.format("H")));
 
