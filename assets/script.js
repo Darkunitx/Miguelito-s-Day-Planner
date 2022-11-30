@@ -1,22 +1,45 @@
 $(document).ready(function() {
 
+  nineAmEl = $("#9MORNING");
+  tenAmEl = $("#10MORNING");
+  elevenAmEl = $("#11MORNING");
+  twelveAmEl = $("#12MORNING");
+  thirteenAmEl = $("#13MORNING");
+  fourteenAmEl = $("#14MORNING");
+  fifteenAmEl = $("#15MORNING");
+  sixteenAmEl = $("#16MORNING");
+  seventeenAmEl = $("#17MORNING");
+
+  var nineAmData = localStorage.getItem("9AM");
+  var tenAmData = localStorage.getItem("10AM");
+  var elevenAmData = localStorage.getItem("11AM");
+  var twelveAmData = localStorage.getItem("12PM");
+  var thirteenAmData = localStorage.getItem("1PM");
+  var fourteenAmData = localStorage.getItem("2PM");
+  var fifteenAmData = localStorage.getItem("3PM");
+  var sixteenAmData = localStorage.getItem("4PM");
+  var seventeenAmData = localStorage.getItem("5PM");
+
+  $('#9MORNING').val(nineAmData);
+  $('#10MORNING').val(tenAmData);
+  $('#11MORNING').val(elevenAmData);
+  $('#12MORNING').val(twelveAmData);
+  $('#13MORNING').val(thirteenAmData);
+  $('#14MORNING').val(fourteenAmData);
+  $('#15MORNING').val(fifteenAmData);
+  $('#16MORNING').val(sixteenAmData);
+  $('#17MORNING').val(seventeenAmData);
+
+
 
   $(".saveBtn").on('click', function () {
     
     var keyName = $(this).siblings(".text-center").text().trim();
     var keyValue = $(this).siblings(".description").val().trim();
-    console.log(keyName);
-    console.log(keyValue);
-    console.log(localStorage);
-
     localStorage.setItem(keyName, keyValue);
-    console.log(localStorage);
-  
+
 
   });
-  
-
-
   
 
 function displayTime(today) {
