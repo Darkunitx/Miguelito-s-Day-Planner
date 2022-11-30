@@ -1,7 +1,7 @@
 # My Workday Planner
 
 ## Description 
-- Website created to help users plan their workday and save their information. 
+- Website created to help users plan their workday and save their information such as appoinments or important meetings that they may have to attend. 
 
 ## Table of contents
 - [Description](#description)
@@ -18,6 +18,9 @@
 ![Website screenshot](./assets/images/FtjxSUXwJN.png "Website screenshot")
 
 ## Credits 
+- in collaboration with :
+- Tutor John Coakley
+- TA Emma Olson
 
 - Websites utilized : 
 
@@ -34,6 +37,8 @@
 - https://stackoverflow.com/questions/46095350/parse-json-object-to-data-attr-with-jquery
 - https://stackoverflow.com/questions/9126264/getting-attribute-of-a-parent-node
 - https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem
+- https://www.w3schools.com/jsref/prop_win_localstorage.asp
+- https://stackoverflow.com/questions/1642447/how-to-change-the-content-of-a-textarea-with-javascript
 
 
 ## License
